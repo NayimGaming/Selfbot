@@ -258,16 +258,4 @@ client.on('message', message => {
 		}
 });
 
-client.on('message', message => {
-	if(message.content === prefix + "infosrv"){
-		var embed2 = new Discord.RichEmbed()
-				.setTitle("Info du Serveur !")
-				.setDescription(`Info de ${message.guild.name} ! :tada:`)
-				.addField(`Crée le : ${message.guild.createdAt} ! `)
-				.addField(`Les roles: `)
-				.addField(`Crée par : ${message.guild.ownerID} !`)
-				.setFooter("Voilà ! :D")
-			message.channel.sendEmbed(embed2);
-		message.delete();
-	}
-});
+
